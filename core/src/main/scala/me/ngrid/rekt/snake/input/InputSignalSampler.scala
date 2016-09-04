@@ -1,4 +1,4 @@
-package me.ngrid.rekt.snake.utils
+package me.ngrid.rekt.snake.input
 
 import com.badlogic.gdx.Input
 import me.ngrid.rekt.snake.entities.SnakeDirection

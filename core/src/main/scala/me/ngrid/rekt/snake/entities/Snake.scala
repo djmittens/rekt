@@ -1,6 +1,7 @@
 package me.ngrid.rekt.snake.entities
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch
+import me.ngrid.rekt.snake.actors.Drawable2D
 
 /**
   *
@@ -11,7 +12,7 @@ object Snake {
   def apply(x: Int, y: Int): Snake = Snake(x, y, SnakeDirection.Right, Nil)
 }
 
-case class Snake(x: Int = 0, y: Int = 0, direction: SnakeDirection, parts: List[BodyPart]) {
+case class Snake(x: Int = 0, y: Int = 0, direction: SnakeDirection, parts: List[BodyPart]) extends Drawable2D {
   import Snake._
 
   def move(boundaries: (Int, Int), apple: Apple): Snake = {

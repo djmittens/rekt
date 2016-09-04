@@ -6,7 +6,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer
 import com.badlogic.gdx.math.MathUtils
 import me.ngrid.rekt.snake.entities.{Apple, Snake}
-import me.ngrid.rekt.snake.utils.InputSignalSampler
+import me.ngrid.rekt.snake.input.InputSignalSampler
 
 /**
   *
@@ -16,7 +16,7 @@ object GameScreen extends ScreenAdapter {
   import com.badlogic.gdx.Gdx._
   import com.badlogic.gdx.graphics.GL20
 
-  val MOVE_TIME = 0.5F
+  val MOVE_TIME = 0.25F
   val GRID_CELL = 32
 
   var batch: SpriteBatch = _
@@ -29,7 +29,7 @@ object GameScreen extends ScreenAdapter {
   var appleShown = false
 
   var inputSampler: InputSignalSampler = InputSignalSampler()
-  var playing = true;
+  var playing = true
 
   override def show(): Unit = {
     batch = new SpriteBatch()
